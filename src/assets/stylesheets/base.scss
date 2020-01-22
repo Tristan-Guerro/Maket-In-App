@@ -24,7 +24,7 @@ html, body, #root {
   min-width: 100%;
   margin: 0;
   padding: 0;
-  @include font-face('Poppins', 14px, normal);
+  @include font-face('Roboto', 14px, normal);
 }
 
 *, *:before, *:after {
