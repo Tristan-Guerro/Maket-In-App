@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import { executeStatement } from './components/bdd/bddrequest.js';
+import { Button, Card, CardMedia } from '@material-ui/core';
+// import { executeStatement } from '../bdd/bddrequest.js';
+import './viewcampaigns.scss';
 
 
 class ViewCampaigns extends Component {
 
-
   render() {
-
     return (
-      <div className>
+      <div>
         <h1>Visualiser</h1>
+        <Card className="card">
+          <CardMedia className="card-image" image="img/xlstatlogo.jpg" alt="logo"/>
+        </Card>  
         <Button className="btn-class">Valider</Button>
       </div>
     );
