@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import { executeStatement } from './components/bdd/bddrequest.js';
-
+import { Button } from '@material-ui/core';
+import { connection } from '../bdd/bddrequest.js';
+import './viewcampaigns.scss';
 
 class ViewCampaigns extends Component {
 
-
   render() {
-
     return (
-      <div className>
+      <div>
         <h1>Visualiser</h1>
-        <Button className="btn-class">Valider</Button>
+        <Button className="btn-class" onClick={connection}>Valider</Button>
       </div>
     );
   }
