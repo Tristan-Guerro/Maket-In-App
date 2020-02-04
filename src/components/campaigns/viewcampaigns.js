@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
-import { connection } from '../bdd/bddrequest.js';
+import { executeStatement } from '../bdd/bddrequest.js';
 import './viewcampaigns.scss';
 
 class ViewCampaigns extends Component {
