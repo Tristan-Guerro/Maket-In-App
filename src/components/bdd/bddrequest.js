@@ -17,7 +17,7 @@ export const config = {
 
 const Request = require('tedious').Request;  
 
-const executeStatement = () => {  
+export const executeStatement = () => {  
     request = new Request("select COUNT(id) from campagne where enabled=1;", function(err) {  
     if (err) {  
         console.log(err);}
@@ -41,7 +41,7 @@ const executeStatement = () => {
     connection.execSql(request);  
 }
 
-export const connection = new Connection(config);  
+const connection = new Connection(config);  
 connection.on('connect', function(err) {    
     console.log("Connected");  
     executeStatement();  
