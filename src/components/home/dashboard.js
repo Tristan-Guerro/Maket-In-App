@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import { Button,Typography,Grid,Card,CardActions,CardContent,CardMedia,Paper  } from '@material-ui/core';
 import './home.scss';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 
 
 class Dashboard extends Component {
@@ -23,16 +17,17 @@ class Dashboard extends Component {
 
     return (
       <div>
+        <Paper>
         <Grid container spacing={3} justify="center" alignItems="center">
-          <h1>Bienvenue sur le dashboard de marketing in-app</h1>
+          <h1 className="title">Bienvenue sur le dashboard de marketing in-app</h1>
         </Grid> 
 
         <br/>
         
         <Grid container spacing={3} justify="center" alignItems="center">
          <Grid item>
-          <Card>
-          <CardMedia image={'https://image.freepik.com/free-photo/river-foggy-mountains-landscape_1204-511.jpg'}  title="Contemplative Reptile"/>
+          <Card className="card">
+          <CardMedia className="card-image" image="img/diffu.png" alt="logo"/>
              <CardContent>
                 <Typography variant="h5" component="h2">
                    Créer une nouvelle campagne
@@ -46,7 +41,8 @@ class Dashboard extends Component {
           </Grid>
           
           <Grid item>
-          <Card>
+          <Card className="card">
+          <CardMedia className="card-image" image="img/visu.png" alt="logo"/>
              <CardContent>
                 <Typography variant="h5" component="h2">
                    Visualiser une campagne
@@ -59,6 +55,7 @@ class Dashboard extends Component {
            </Card>
           </Grid>
         </Grid> 
+        </Paper>
       </div>
     );
   }

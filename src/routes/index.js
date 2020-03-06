@@ -7,8 +7,10 @@ import ResetPassword from '../components/authentication/reset-password';
 import RequireAuth from '../components/hoc/require-auth';
 import AuthenticatedRoutes from './authenticated/';
 import Dashboard from '../components/home/dashboard';
-import NewCampaigns from '../components/campaigns/newcampaigns';
-import ViewCampaigns from '../components/campaigns/viewcampaigns';
+import ViewCampaigns from '../components/campaigns/viewcamp/viewcampaigns';
+import Logs from '../components/campaigns/viewcamp/logs';
+import PropCampaing from '../components/campaigns/viewcamp/propcampain';
+import NewCampaigns from '../components/campaigns/newcamp/newcampaigns';
 
 const TopLevelRoutes = () => (
   <Switch>
@@ -18,7 +20,9 @@ const TopLevelRoutes = () => (
     <Route path="/reset-password/:token" component={ResetPassword} />
     <Route exact path="/dashboard" component={Dashboard} />
     <Route exact path="/newcampaigns" component={NewCampaigns} />
-    <Route exact path="/viewcampaigns" component={ViewCampaigns} />
+    <Route exact path="/viewcampaigns" component={ViewCampaigns} />    
+    <Route path="/viewcampaigns/:id/logs" component={Logs} />
+    <Route path="/viewcampaigns/:id/propcampain" component={PropCampaing} />
   </Switch>
 );
 
