@@ -40,7 +40,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.5",
     "ajv": "^6.8.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "azure-function-express": "^2.0.0",
     "babel": "^6.23.0",
     "babel-polyfill": "^6.26.0",
